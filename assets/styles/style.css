@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header, main, footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav .logo-wrapper {
+  width: 10%;
+}
+
+nav .nav-contents {
+  width: 90%;
+  display: none;
+}
+
+nav .nav-contents.show-nav-menu {
+  position: absolute;
+  display: block;
+  background: linear-gradient(to right, rgba(237, 255, 231, 0.986) 40%, rgba(239, 243, 240, 0.986));
+  width: 100%;
+  top: 4em;
+  left: 0;
+  padding: 0 1em 1em;
+}
+
+nav .nav-contents.show-nav-menu a {
+  display: block;
+  padding: 1em;
+}
+
+nav .nav-contents .centered {
+  width: 85%;
+}
+
+nav .nav-contents .centered ul li, footer li {
+  list-style-type: none;
+}
+
+nav .nav-contents .right .register a, main .contact .text button {
+  background-color: rgb(40, 124, 24);
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  width: fit-content;
+  border: none;
+}
+
+.logo {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.nav-toggler {
+  width: 40px;
+}
+
+.nav-toggler div {
+  width: 100%;
+  height: 5px;
+  background: #000;
+  margin-top: 5px;
+  margin-bottom: 0;
+  transform: rotate(0deg);
+  transition: all .2s ease-in-out;
+}
+
+.nav-toggler.open div:nth-of-type(1) {
+  transform: rotate(45deg);
+  margin-bottom: -10px;
+  transition: all .2s ease-in-out;
+}
+
+.nav-toggler.open div:nth-of-type(2) {
+  transform: rotate(-45deg);
+  transition: all .2s ease-in-out;
+}
+
+header {
+  padding: 1em;
+  background: linear-gradient(to right, rgba(237, 255, 231, 0.986) 40%, rgba(239, 243, 240, 0.986));
+}
+
+header .header-contents {
+  padding: 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header-contents .text {
+  width: 100%;
+  line-height: 2em;
+  padding-right: 3%;
+}
+
+header .header-contents .text h1 {
+  font-size: 2rem;
+  margin-bottom: .5em;
+}
+
+header .header-contents .text p {
+  line-height: 1.5em;
+}
+
+header .header-contents .text .download-image-wrapper {
+  margin-top: .5em;
+  display: flex;
+}
+header .header-contents .text img {
+  width: 8em;
+}
+
+header .header-contents .text img:nth-of-type(2) {
+  width: 10em;
+}
+
+header .header-contents .image-wrapper {
+  display: none;
+}
+
+header .header-contents .image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding: 2em;
+}
+
+main .discover {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .discover figure {
+  width: 50%;
+}
+
+main .discover figure img {
+  width: 100%;
+}
+
+main .discover .body {
+  text-align: center;
+}
+
+
+main .discover .body p, main .globe p {
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+main .info-service {
+  line-height: 1.6;
+  text-align: center;
+}
+
+main .info-service figure, main .info-service figure img {
+  width: 100%;
+}
+
+main .partners {
+  padding: 4em 5%;
+}
+
+main .partners figure {
+  display: flex;
+  justify-content: space-between;
+}
+main .partners figure img {
+  width: 25%;
+}
+
+main .globe {
+  height: 450px;
+  background-image: url('../images/globe.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #ebfcea;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main .globe::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(14, 17, 14, 0.3);
+}
+
+main .globe .text {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 2px #111;
+  z-index: 2;
+}
+main .contact .text {
+  width: 80%;
+  text-align: center;
+}
+main .contact {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 6em 0;
+}
+
+main .contact .text h1 {
+  font-size: 1.3rem;
+  margin-bottom: .5em;
+}
+
+main .contact .text button {
+  padding: 1em 2em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3em;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+footer .social img {
+  margin: .2em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 640px) {
+  header {
+    padding: 0;
+  }
+
+  header, section, footer {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  main .contact .text h1 {
+    font-size: 1.3rem;
+  }
+
+  main .contact .text p {
+    font-size: 0.8rem;
+  }
+
+  main .discover {
+    padding: 5em 3em;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header, section, footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  header .header-contents .image-wrapper {
+    width: 50%;
+    display: block;
+  }
+
+  header .header-contents .text {
+    width: 50%;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  nav .nav-toggler {
+    display: none;
+  }
+
+  nav .nav-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav .nav-contents .centered ul li {
+    display: inline;
+    margin: 0 1em;
+  }
+
+  nav .nav-contents .right {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+  }
+
+  main .discover {
+    padding: 5em 6em;
+    flex-direction: row;
+  }
+
+  header .header-contents .text h1 {
+    font-size: 2rem;
+  }
+
+  main .globe {
+    background-size: contain;
+    padding-left: 5em;
+  }
+
+  main .globe .text {
+    width: 50%;
+    text-align: left;
+  }
+
+  main .contact .text h1 {
+    font-size: 2rem;
+  }
+
+  main .contact .text p {
+    font-size: 1rem;
+  }
+
+  main .discover .body h1, main .info-service h1, main .globe h1 {
+    font-size: 3rem;
+  }
+
+  main .discover .body {
+    width: 35%;
+    text-align: left;
+  }
+
+  main .globe .text {
+    color: #000;
+    text-shadow: none;
+  }
+
+  main .globe::before {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header .header-contents .text {
+    line-height: 3.5em;
+  }
+
+  main .globe {
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .globe {
+    padding-left: 5em;
+  }
+
+  header .header-contents .text h1 {
+    font-size: 3.5rem;
+  }
+
+  main .globe .text {
+    width: 40%;
+  }
+
+  main .contact .text h1 {
+    font-size: 2.5rem;
+  }
+}
